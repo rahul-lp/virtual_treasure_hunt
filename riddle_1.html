@@ -14,34 +14,41 @@
 
 <body>
     <!-- Riddle Page -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mt-4 bg-dark-subtle text-center" style="height: 8vh;">
+    <div class="d-flex flex-column">
+            <div class="container mt-4 bg-dark-subtle text-center" style="height: 8vh;">
                 <div class="h1 mt-3">Progress Bar</div>
             </div>
-            <div class="col-12 mt-4 bg-dark-subtle text-center" style="height: 15vh;">
+            <div class="container mt-4 bg-dark-subtle text-center" style="height: 15vh;">
                 <div class="h4 mt-5">Riddle Graphics</div>
             </div>
-            <div class="co-12 mt-5 bg-dark-subtle text-center" style="height: 35vh;">
+            <div class="container mt-5 bg-dark-subtle text-center" style="height: 35vh;" id="riddle">
                 <div class="h1 mt-5">Riddle 1</div>
             </div>
-            <div class="col-12 mt-5 bg-dark-subtle text-center" style="height: 5vh;">
+            <div class="container mt-5 bg-dark-subtle text-center d-none" style="height: 52vh;" id="story">
+                <div class="h1 mt-5">Story 1</div>
+            </div>
+            <div class="container mt-5 bg-dark-subtle text-center pt-2" style="height: 5vh;" id="filter">
                 <!-- Link to Filter + hint pop-up icon -->
                 <a href="#" class="link-dark">Scan with filter to see code</a>
             </div>
-            <div class="col-12">
+            <div class="container" id="code_input">
                 <!-- Code Input -->
                 <input type="text" class="form-control mt-3" id="code" placeholder="code" required>
             </div>
-            <div class="col-12 mt-5 text-center" style="height: 15vh;">
+            <div class="container mt-5 text-center" style="height: 15vh;" id="action_btn_1">
+                <div class="btn btn-primary px-4">Reveal Story</div>
+            </div>
+            <div class="container mt-5 text-center d-none" style="height: 15vh;" id="action_btn_2">
                 <div class="btn btn-primary px-4">
                     <a href="riddle_1.html" style="color: aliceblue;">
-                        Reveal Story
+                        Next Riddle
                     </a>
                 </div>
             </div>
-        </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="javascript/main.js"></script>
 </body>
 
 </html>
