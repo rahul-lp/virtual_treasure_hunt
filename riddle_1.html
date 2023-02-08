@@ -15,36 +15,42 @@
 <body>
     <!-- Riddle Page -->
     <div class="d-flex flex-column">
-            <div class="container mt-4 bg-dark-subtle text-center" style="height: 8vh;">
-                <div class="h1 mt-3">Progress Bar</div>
+        <div class="container mt-4 text-center">
+            <img src="res/temp_progress_bar.png" alt="">
+        </div>
+        <div class="container mt-4 bg-dark-subtle text-center" style="height: 15vh;">
+            <div class="h4 mt-5">Riddle Graphics</div>
+        </div>
+        <div class="container mt-3 bg-primary-subtle text-start" style="height: 42vh;" id="riddle">
+            <div class="h1 mt-3">Jana hai ek jaga,<br>
+                Jaha technology hai sadiyo purani,<br>
+                Chillar na lejane ki bhool mat karna,<br>
+                Physical format ki zaroorat hai bhari,<br>
+                4:30 ke pehele nahi gaye toh barbad ho jayegi kahani sari.
             </div>
-            <div class="container mt-4 bg-dark-subtle text-center" style="height: 15vh;">
-                <div class="h4 mt-5">Riddle Graphics</div>
+        </div>
+        <div class="container mt-4 bg-dark-subtle text-center d-none" style="height: 52vh;" id="story">
+            <div class="h1 mt-5">Story 1</div>
+        </div>
+        <div class="container mt-4 text-center" style="height: 5vh;" id="filter">
+            <!-- Link to Filter + hint pop-up icon -->
+            <a href="https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D"
+                class="btn link-danger fs-3" style="background-color: aliceblue;">Scan with filter to see code</a>
+        </div>
+        <div class="container px-5" id="code_input">
+            <!-- Code Input -->
+            <input type="text" class="form-control mt-4 px-2" id="code" placeholder="code" required>
+        </div>
+        <div class="container mt-5 text-center" style="height: 15vh;" id="action_btn_1">
+            <div class="btn btn-primary px-4">Reveal Story</div>
+        </div>
+        <div class="container mt-5 text-center d-none" style="height: 15vh;" id="action_btn_2">
+            <div class="btn btn-primary px-4">
+                <a href="riddle_1.html" style="color: aliceblue;">
+                    Next Riddle
+                </a>
             </div>
-            <div class="container mt-5 bg-dark-subtle text-center" style="height: 35vh;" id="riddle">
-                <div class="h1 mt-5">Riddle 1</div>
-            </div>
-            <div class="container mt-5 bg-dark-subtle text-center d-none" style="height: 52vh;" id="story">
-                <div class="h1 mt-5">Story 1</div>
-            </div>
-            <div class="container mt-5 bg-dark-subtle text-center pt-2" style="height: 5vh;" id="filter">
-                <!-- Link to Filter + hint pop-up icon -->
-                <a href="#" class="link-dark">Scan with filter to see code</a>
-            </div>
-            <div class="container" id="code_input">
-                <!-- Code Input -->
-                <input type="text" class="form-control mt-3" id="code" placeholder="code" required>
-            </div>
-            <div class="container mt-5 text-center" style="height: 15vh;" id="action_btn_1">
-                <div class="btn btn-primary px-4">Reveal Story</div>
-            </div>
-            <div class="container mt-5 text-center d-none" style="height: 15vh;" id="action_btn_2">
-                <div class="btn btn-primary px-4">
-                    <a href="riddle_1.html" style="color: aliceblue;">
-                        Next Riddle
-                    </a>
-                </div>
-            </div>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
