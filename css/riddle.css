@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 100%;
+  max-height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.progressbarsection {
+  width: 100vw;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.progressbardiv {
+}
+
+.riddlesection {
+  width: 100vw;
+  height: 60vh;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.riddlegraphics {
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.riddletext {
+  width: 50%;
+  height: 50%;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom {
+  width: 100vw;
+  height: 30vh;
+  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.linkdiv {
+  background-color: bisque;
+  height: 80px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 30px;
+}
+
+input[type="text"],
+select,
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 30px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.revealbuttondiv {
+  background-color: bisque;
+  height: 40px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 30px;
+}
