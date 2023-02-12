@@ -6,22 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riddles</title>
     <link rel="stylesheet" href="css/riddle.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <!-- progress bar section -->
     <section class="progressbarsection">
       <div class="progressbardiv">
         <p>Hey</p>
       </div>
     </section>
 
+    <!-- riddle section -->
+
     <section class="riddlesection" id="r1section">
-      <div class="riddlegraphics" id="r1graphic">
+      <div class="riddlegraphicsdiv">
         <img
           src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg"
         />
       </div>
       <div class="break"></div>
-      <div class="riddletext" id="r1text">
+      <div class="riddletextdiv">
         <p>
           Jana hai ek jaga,<br />
           Jaha technology hai sadiyo purani,<br />
@@ -31,11 +39,12 @@
         </p>
       </div>
     </section>
-    <section class="bottom">
+
+    <!-- bottom section with buttons and code -->
+    <section class="bottom" id="bottom1">
       <div class="linkdiv">
         <a
           class="filterlinks"
-          id="filter1"
           href="https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D"
           >Scan with filter to see code</a
         >
@@ -50,8 +59,23 @@
       <div class="break"></div>
 
       <div class="revealbuttondiv">
-        <div id="button1">Reveal Story</div>
+        <div id="revealstorybutton" onclick="revealStory()">Reveal Story</div>
       </div>
     </section>
+
+    <!-- Story Section -->
+    <section class="storysection" id="storysection1">
+      <div class="storydiv">
+        <p>This is my story</p>
+      </div>
+    </section>
+    <!-- next riddle section -->
+    <section class="nextriddlesection" id="nextriddlesection1">
+      <div class="nextriddlediv">
+        <div id="nextriddlebutton" onclick="changeContent()">Next Riddle</div>
+      </div>
+    </section>
+
+    <script src="javascript/riddles.js"></script>
   </body>
 </html>

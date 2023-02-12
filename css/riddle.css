@@ -56,7 +56,7 @@ p {
   flex-wrap: wrap;
 }
 
-.riddlegraphics {
+.riddlegraphicsdiv {
   width: 50%;
   height: 50%;
   background-color: black;
@@ -65,7 +65,7 @@ p {
   justify-content: center;
 }
 
-.riddletext {
+.riddletextdiv {
   width: 50%;
   height: 50%;
   background-color: green;
@@ -110,6 +110,47 @@ textarea {
 }
 
 .revealbuttondiv {
+  background-color: bisque;
+  height: 40px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 30px;
+}
+
+.storysection {
+  width: 100vw;
+  height: 70vh;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: none;
+}
+
+.nextriddlesection {
+  width: 100vw;
+  height: 20vh;
+  background-color: green;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: none;
+}
+
+.storydiv {
+  width: 50%;
+  height: 80%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.nextriddlediv {
   background-color: bisque;
   height: 40px;
   width: 150px;
