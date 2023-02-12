@@ -13,22 +13,19 @@
     ></script>
   </head>
   <body>
+    <div class="logo" id="logo"><img src="res/Logo/logo.png" alt="logo" /></div>
     <!-- progress bar section -->
-    <section class="progressbarsection">
+    <section class="progressbarsection" id="progressbarsection1">
       <div class="progressbardiv">
-        <p>Hey</p>
+        <img src="res/Progress bar/Progress 1.png" alt="progress bar 1" />
       </div>
+
+      <div class="break"></div>
     </section>
 
     <!-- riddle section -->
 
     <section class="riddlesection" id="r1section">
-      <div class="riddlegraphicsdiv">
-        <img
-          src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg"
-        />
-      </div>
-      <div class="break"></div>
       <div class="riddletextdiv">
         <p>
           Jana hai ek jaga,<br />
@@ -38,18 +35,46 @@
           4:30 ke pehele nahi gaye toh barbad ho jayegi kahani sari.
         </p>
       </div>
+      <div class="break"></div>
+      <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
+      <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
+
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="pushtoright"></div>
+          <span class="close">&times;</span>
+          <div class="break"></div>
+
+          <img src="res/Images/Modal help.svg" alt="" />
+          <div class="break"></div>
+          <div class="break"></div>
+
+          <p>
+            You are getting redirected to Instagram! Scan the QR code at the
+            location using the Instagram camera to unlock the filter
+          </p>
+          <div class="break"></div>
+          <div class="break"></div>
+          <div class="redirectbutton" tabindex="1">
+            <a
+              class="filterlinks"
+              href="https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D"
+              >Continue</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- bottom section with buttons and code -->
     <section class="bottom" id="bottom1">
-      <div class="linkdiv">
-        <a
-          class="filterlinks"
-          href="https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D"
-          >Scan with filter to see code</a
-        >
+      <div class="break"></div>
+      <div class="linkdiv" id="instamodal" tabindex="1">
+        Get Instagram filter here
       </div>
 
+      <div class="break"></div>
       <div class="break"></div>
 
       <div class="codediv">
@@ -58,22 +83,30 @@
 
       <div class="break"></div>
 
-      <div class="revealbuttondiv">
-        <div id="revealstorybutton" onclick="revealStory()">Reveal Story</div>
+      <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+        Reveal Story
       </div>
+      <div class="break"></div>
     </section>
 
     <!-- Story Section -->
     <section class="storysection" id="storysection1">
-      <div class="storydiv">
-        <p>This is my story</p>
+      <div class="riddlegraphicsdiv">
+        <img src="res/Illustrations/illustration_print_lab.jpg" />
+      </div>
+      <div class="break"></div>
+      <div class="storywrapper">
+        <div class="storydiv">
+          <p>
+            No matter how tech-savvy you are, at the Print Lab, you are
+            transported in the coin age! No G-pay, only C-pay!
+          </p>
+        </div>
       </div>
     </section>
     <!-- next riddle section -->
     <section class="nextriddlesection" id="nextriddlesection1">
-      <div class="nextriddlediv">
-        <div id="nextriddlebutton" onclick="changeContent()">Next Riddle</div>
-      </div>
+      <div class="nextriddlediv" tabindex="1">Next Riddle</div>
     </section>
 
     <script src="javascript/riddles.js"></script>
