@@ -1,0 +1,40 @@
+* {
+  font-size: 2vh;
+}
+.top {
+  width: 100vw;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 4vh;
+}
+
+.mid {
+  width: 100vw;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.finalimage {
+  width: 100%;
+}
+
+.final {
+  background-color: #2d3f4d;
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
