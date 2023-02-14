@@ -65,7 +65,7 @@ p {
 }
 
 .progressbardiv {
-  width: 70%;
+  width: 65%;
 }
 
 .riddlesection {
@@ -112,6 +112,13 @@ p {
   flex-wrap: wrap;
   border-radius: 4px;
   color: white;
+  position: relative;
+}
+
+.linkdiv img {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .linkdiv:focus {
@@ -243,7 +250,7 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 50vh;
 }
 
 /* The Close Button */

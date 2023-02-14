@@ -13,6 +13,29 @@
     ></script>
   </head>
   <body>
+    <div id="instabackdiv" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closeinstaback()">&times;</span>
+        <div class="break"></div>
+
+        <img src="res/Images/instaback.svg" alt="" />
+        <div class="break"></div>
+        <div class="break"></div>
+
+        <p>
+          Welcome back! <br />Enter the code you found in the filter in the box
+          below
+        </p>
+        <div class="break"></div>
+        <div class="break"></div>
+        <div class="redirectbutton" tabindex="1" onclick="closeinstaback()">
+          Continue
+        </div>
+      </div>
+    </div>
+
     <!-- progress bar section -->
     <section class="progressbarsection" id="progressbarsection1">
       <div class="progressbardiv">
@@ -25,7 +48,7 @@
 
     <section class="progressbarsection" id="progressbarsection2">
       <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 1.png" alt="progress bar 1" />
+        <img src="res/Progress bar/Progress 2.png" alt="progress bar 1" />
       </div>
 
       <div class="break"></div>
@@ -34,7 +57,7 @@
 
     <section class="progressbarsection" id="progressbarsection3">
       <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 1.png" alt="progress bar 1" />
+        <img src="res/Progress bar/Progress 3.png" alt="progress bar 1" />
       </div>
 
       <div class="break"></div>
@@ -43,7 +66,7 @@
 
     <section class="progressbarsection" id="progressbarsection4">
       <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 1.png" alt="progress bar 1" />
+        <img src="res/Progress bar/Progress 4.png" alt="progress bar 1" />
       </div>
 
       <div class="break"></div>
@@ -52,7 +75,7 @@
 
     <section class="progressbarsection" id="progressbarsection5">
       <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 1.png" alt="progress bar 1" />
+        <img src="res/Progress bar/Progress 5.png" alt="progress bar 1" />
       </div>
 
       <div class="break"></div>
@@ -64,16 +87,29 @@
     <section class="riddlesection" id="r1section">
       <div class="riddletextdiv">
         <p>
-          Jana hai ek jaga,<br />
-          Jaha technology hai sadiyo purani,<br />
-          Chillar na lejane ki bhool mat karna,<br />
-          Physical format ki zaroorat hai bhari,<br />
-          4:30 ke pehele nahi gaye toh barbad ho jayegi kahani sari.
+          Error! Error! Your submissions is now a terror Even the dinosaur
+          cannot save you from this horror This place is your only saviour
         </p>
       </div>
       <div class="break"></div>
-      <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
-      <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
+      <div class="helpicons" onclick="hintmodal()">
+        <img src="res/Images/idea.png" alt="" />
+      </div>
+
+      <div id="hintmodal1" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="pushtoright"></div>
+          <span class="close" onclick="closehint()">&times;</span>
+          <div class="break"></div>
+
+          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+          <div class="break"></div>
+          <div class="break"></div>
+
+          <p>Hint 1</p>
+        </div>
+      </div>
 
       <div id="instamodal1" class="modal">
         <!-- Modal content -->
@@ -95,7 +131,7 @@
           <div
             class="redirectbutton"
             tabindex="1"
-            onclick="window.location.href = 'https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'"
+            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
           >
             Continue
           </div>
@@ -105,11 +141,30 @@
 
     <section class="riddlesection" id="r2section">
       <div class="riddletextdiv">
-        <p>2nd riddle yoooooooooooooooo</p>
+        <p>
+          A place which reminds you of an unforgettable meal For a day, Gold and
+          white colours are the real deal
+        </p>
       </div>
       <div class="break"></div>
-      <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
-      <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
+      <div class="helpicons" onclick="hintmodal()">
+        <img src="res/Images/idea.png" alt="" />
+      </div>
+
+      <div id="hintmodal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="pushtoright"></div>
+          <span class="close" onclick="closehint()">&times;</span>
+          <div class="break"></div>
+
+          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+          <div class="break"></div>
+          <div class="break"></div>
+
+          <p>Hint 2</p>
+        </div>
+      </div>
 
       <div id="instamodal2" class="modal">
         <!-- Modal content -->
@@ -131,7 +186,7 @@
           <div
             class="redirectbutton"
             tabindex="1"
-            onclick="window.location.href = 'https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'"
+            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
           >
             Continue
           </div>
@@ -141,11 +196,30 @@
 
     <section class="riddlesection" id="r3section">
       <div class="riddletextdiv">
-        <p>3rd storyyy yoooooo</p>
+        <p>
+          Yellow Yellow, You are greeted by a peace-loving fellow Guiding you to
+          a geometry that is forever hollow
+        </p>
       </div>
       <div class="break"></div>
-      <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
-      <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
+      <div class="helpicons" onclick="hintmodal()">
+        <img src="res/Images/idea.png" alt="" />
+      </div>
+
+      <div id="hintmodal3" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="pushtoright"></div>
+          <span class="close" onclick="closehint()">&times;</span>
+          <div class="break"></div>
+
+          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+          <div class="break"></div>
+          <div class="break"></div>
+
+          <p>Hint 3</p>
+        </div>
+      </div>
 
       <div id="instamodal3" class="modal">
         <!-- Modal content -->
@@ -167,7 +241,7 @@
           <div
             class="redirectbutton"
             tabindex="1"
-            onclick="window.location.href = 'https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'"
+            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
           >
             Continue
           </div>
@@ -177,11 +251,30 @@
 
     <section class="riddlesection" id="r4section">
       <div class="riddletextdiv">
-        <p>4thhh storyyy yoooooo</p>
+        <p>
+          Enter through this place where opportunities are made, work displayed
+          and celebrations are slayed
+        </p>
       </div>
       <div class="break"></div>
-      <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
-      <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
+      <div class="helpicons" onclick="hintmodal()">
+        <img src="res/Images/idea.png" alt="" />
+      </div>
+
+      <div id="hintmodal4" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="pushtoright"></div>
+          <span class="close" onclick="closehint()">&times;</span>
+          <div class="break"></div>
+
+          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+          <div class="break"></div>
+          <div class="break"></div>
+
+          <p>Hint 4</p>
+        </div>
+      </div>
 
       <div id="instamodal4" class="modal">
         <!-- Modal content -->
@@ -203,7 +296,7 @@
           <div
             class="redirectbutton"
             tabindex="1"
-            onclick="window.location.href = 'https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'"
+            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
           >
             Continue
           </div>
@@ -213,11 +306,30 @@
 
     <section class="riddlesection" id="r5section">
       <div class="riddletextdiv">
-        <p>5hhh storyyy yoooooo</p>
+        <p>
+          Let your work take a wing, but wait, change you must bring! Don’t have
+          any? borrow it fast, for technology here is frozen in past
+        </p>
       </div>
       <div class="break"></div>
-      <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
-      <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
+      <div class="helpicons" onclick="hintmodal()">
+        <img src="res/Images/idea.png" alt="" />
+      </div>
+
+      <div id="hintmodal5" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="pushtoright"></div>
+          <span class="close" onclick="closehint()">&times;</span>
+          <div class="break"></div>
+
+          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+          <div class="break"></div>
+          <div class="break"></div>
+
+          <p>Hint 5</p>
+        </div>
+      </div>
 
       <div id="instamodal5" class="modal">
         <!-- Modal content -->
@@ -239,7 +351,7 @@
           <div
             class="redirectbutton"
             tabindex="1"
-            onclick="window.location.href = 'https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'"
+            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
           >
             Continue
           </div>
@@ -256,7 +368,8 @@
         tabindex="1"
         onclick="instamodals()"
       >
-        Get Instagram filter here
+        Go to Instagram filter
+        <img src="res/Images/Look here.png" />
       </div>
 
       <div class="break"></div>
@@ -282,7 +395,8 @@
         tabindex="1"
         onclick="instamodals()"
       >
-        Get Instagram filter here
+        Go to Instagram filter
+        <img src="res/Images/Look here.png" />
       </div>
 
       <div class="break"></div>
@@ -308,7 +422,9 @@
         tabindex="1"
         onclick="instamodals()"
       >
-        Get Instagram filter here
+        Go to Instagram filter
+
+        <img src="res/Images/Look here.png" />
       </div>
 
       <div class="break"></div>
@@ -334,7 +450,8 @@
         tabindex="1"
         onclick="instamodals()"
       >
-        Get Instagram filter here
+        Go to Instagram filter
+        <img src="res/Images/Look here.png" />
       </div>
 
       <div class="break"></div>
@@ -360,7 +477,8 @@
         tabindex="1"
         onclick="instamodals()"
       >
-        Get Instagram filter here
+        Go to Instagram filter
+        <img src="res/Images/Look here.png" />
       </div>
 
       <div class="break"></div>
@@ -381,60 +499,48 @@
     <!-- Story Section -->
     <section class="storysection" id="storysection1">
       <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_print_lab.png" />
+        <img src="res/Illustrations/illustration_wifi.png" />
       </div>
       <div class="break"></div>
       <div class="storywrapper">
         <div class="storydiv">
-          <p>
-            No matter how tech-savvy you are, at the Print Lab, you are
-            transported in the coin age! No G-pay, only C-pay!
-          </p>
+          <p>Wifi story</p>
         </div>
       </div>
     </section>
 
     <section class="storysection" id="storysection2">
       <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_print_lab.png" />
+        <img src="res/Illustrations/illustration_onam.png" />
       </div>
       <div class="break"></div>
       <div class="storywrapper">
         <div class="storydiv">
-          <p>
-            No matter how tech-savvy you are, at the Print Lab, you are
-            transported in the coin age! No G-pay, only C-pay! this is 2nd sroy
-          </p>
+          <p>Onam story</p>
         </div>
       </div>
     </section>
 
     <section class="storysection" id="storysection3">
       <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_print_lab.png" />
+        <img src="res/Illustrations/illustration_foyer.png" />
       </div>
       <div class="break"></div>
       <div class="storywrapper">
         <div class="storydiv">
-          <p>
-            No matter how tech-savvy you are, at the Print Lab, you are
-            transported in the coin age! No G-pay, only C-pay! 3rd stpryyy
-          </p>
+          <p>Foyer Story</p>
         </div>
       </div>
     </section>
 
     <section class="storysection" id="storysection4">
       <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_print_lab.png" />
+        <img src="res/Illustrations/illustration_dhol_tahasha.png" />
       </div>
       <div class="break"></div>
       <div class="storywrapper">
         <div class="storydiv">
-          <p>
-            No matter how tech-savvy you are, at the Print Lab, you are
-            transported in the coin age! No G-pay, only C-pay!4thfsdhfdsf
-          </p>
+          <p>Dhol story</p>
         </div>
       </div>
     </section>
@@ -448,7 +554,7 @@
         <div class="storydiv">
           <p>
             No matter how tech-savvy you are, at the Print Lab, you are
-            transported in the coin age! No G-pay, only C-pay! 5thhhh
+            transported in the coin age! No G-pay, only C-pay!
           </p>
         </div>
       </div>

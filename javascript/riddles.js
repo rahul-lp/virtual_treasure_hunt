@@ -105,6 +105,7 @@ function nextRiddle() {
     document.getElementById(riddles[mix[i]]).style.display = "flex";
     document.getElementById(bottoms[mix[i]]).style.display = "flex";
     document.getElementById(stories[mix[i - 1]]).style.display = "none";
+    document.getElementById(nextriddles[mix[i - 1]]).style.display = "none";
     document.getElementById(progressbarsection[i - 1]).style.display = "none";
     document.getElementById(progressbarsection[i]).style.display = "flex";
 
@@ -131,5 +132,40 @@ function closeinstamodal() {
 window.onclick = function (event) {
   if (event.target == document.getElementById(instamodalsarr[mix[j]])) {
     document.getElementById(instamodalsarr[mix[j]]).style.display = "none";
+  }
+};
+
+// back from insta ---------------------------------------------------------------------------
+function instaback() {
+  document.getElementById("instabackdiv").style.display = "flex";
+}
+function closeinstaback() {
+  document.getElementById("instabackdiv").style.display = "none";
+}
+window.onclick = function (event) {
+  if (event.target == document.getElementById("instabackdiv")) {
+    document.getElementById("instabackdiv").style.display = "none";
+  }
+};
+
+//  hint modal -----------------------------------------------------------------------------------------
+
+var hintmodals = [
+  "hintmodal1",
+  "hintmodal2",
+  "hintmodal3",
+  "hintmodal4",
+  "hintmodal5",
+];
+
+function hintmodal() {
+  document.getElementById(hintmodals[mix[j]]).style.display = "flex";
+}
+function closehint() {
+  document.getElementById(hintmodals[mix[j]]).style.display = "none";
+}
+window.onclick = function (event) {
+  if (event.target == document.getElementById(hintmodals[mix[j]])) {
+    document.getElementById(hintmodals[mix[j]]).style.display = "none";
   }
 };
