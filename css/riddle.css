@@ -104,13 +104,13 @@ p {
 
 .linkdiv {
   background-color: #f58634;
-  height: 35px;
+  height: 45px;
   width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  border-radius: 4px;
+  border-radius: 20px;
   color: white;
   position: relative;
 }
@@ -132,7 +132,7 @@ p {
 input {
   width: 100%;
   padding: 0.5rem 0.75rem;
-  border-radius: 4px;
+  border-radius: 20px;
   border-color: rgb(182, 182, 182);
 }
 
@@ -154,7 +154,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  border-radius: 4px;
+  border-radius: 20px;
   color: white;
 }
 
@@ -216,7 +216,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 .nextriddlediv:focus {
@@ -243,7 +243,7 @@ button {
 .modal-content {
   background-color: #fefefe;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 20px;
   width: 80%; /* Could be more or less, depending on screen size */
   color: #2d3f4d;
   display: flex;
@@ -276,7 +276,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  border-radius: 4px;
+  border-radius: 20px;
   color: white;
 }
 

@@ -12,7 +12,10 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
+  <!--  -->
   <body>
+    <!-- back from insta modal -->
     <div id="instabackdiv" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
@@ -33,6 +36,22 @@
         <div class="redirectbutton" tabindex="1" onclick="closeinstaback()">
           Continue
         </div>
+      </div>
+    </div>
+
+    <!-- wrong code modal -->
+    <div id="wrongcode" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closecode()">&times;</span>
+        <div class="break"></div>
+
+        <img src="res/Images/invalid.svg" alt="" width="60px" />
+        <div class="break"></div>
+        <div class="break"></div>
+
+        <p>Invalid Code!! Check Again!!</p>
       </div>
     </div>
 
@@ -376,12 +395,16 @@
       <div class="break"></div>
 
       <div class="codediv">
-        <input type="text" id="code" placeholder="Enter Code" required />
+        <input type="text" id="code1" placeholder="Enter Code" required />
       </div>
 
       <div class="break"></div>
 
-      <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      <div
+        class="revealbuttondiv"
+        tabindex="1"
+        onclick="revealStory(document.getElementById('code1').value)"
+      >
         Reveal Story
       </div>
       <div class="break"></div>
@@ -403,12 +426,16 @@
       <div class="break"></div>
 
       <div class="codediv">
-        <input type="text" id="code" placeholder="Enter Code" required />
+        <input type="text" id="code2" placeholder="Enter Code" required />
       </div>
 
       <div class="break"></div>
 
-      <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      <div
+        class="revealbuttondiv"
+        tabindex="1"
+        onclick="revealStory(document.getElementById('code2').value)"
+      >
         Reveal Story
       </div>
       <div class="break"></div>
@@ -431,12 +458,16 @@
       <div class="break"></div>
 
       <div class="codediv">
-        <input type="text" id="code" placeholder="Enter Code" required />
+        <input type="text" id="code3" placeholder="Enter Code" required />
       </div>
 
       <div class="break"></div>
 
-      <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      <div
+        class="revealbuttondiv"
+        tabindex="1"
+        onclick="revealStory(document.getElementById('code3').value)"
+      >
         Reveal Story
       </div>
       <div class="break"></div>
@@ -458,12 +489,16 @@
       <div class="break"></div>
 
       <div class="codediv">
-        <input type="text" id="code" placeholder="Enter Code" required />
+        <input type="text" id="code4" placeholder="Enter Code" required />
       </div>
 
       <div class="break"></div>
 
-      <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      <div
+        class="revealbuttondiv"
+        tabindex="1"
+        onclick="revealStory(document.getElementById('code4').value)"
+      >
         Reveal Story
       </div>
       <div class="break"></div>
@@ -485,12 +520,16 @@
       <div class="break"></div>
 
       <div class="codediv">
-        <input type="text" id="code" placeholder="Enter Code" required />
+        <input type="text" id="code5" placeholder="Enter Code" required />
       </div>
 
       <div class="break"></div>
 
-      <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      <div
+        class="revealbuttondiv"
+        tabindex="1"
+        onclick="revealStory(document.getElementById('code5').value)"
+      >
         Reveal Story
       </div>
       <div class="break"></div>

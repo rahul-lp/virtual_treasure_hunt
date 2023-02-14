@@ -66,27 +66,32 @@ document.getElementById(bottoms[mix[j]]).style.display = "flex";
 document.getElementById(progressbarsection[j]).style.display = "flex";
 
 // reveal story ----------------------------
+var codes = ["FIDA", "DASH", "ROFY", "TADH", "PLAB"];
+function revealStory(code) {
+  code = code.toUpperCase();
+  if (code === codes[mix[j]]) {
+    if (!localStorage.getItem("j")) {
+      j = 0;
+      localStorage.setItem("j", j);
+    } else {
+      j = parseInt(localStorage.getItem("j"));
+      console.log("local storage" + j);
+    }
+    document.getElementById(riddles[mix[j]]).style.display = "none";
+    document.getElementById(bottoms[mix[j]]).style.display = "none";
+    console.log("j" + j);
+    document.getElementById(stories[mix[j]]).style.display = "flex";
+    document.getElementById(nextriddles[mix[j]]).style.display = "flex";
 
-function revealStory() {
-  if (!localStorage.getItem("j")) {
-    j = 0;
+    j = j + 1;
+    if (j == mix.length) {
+      j = j - 1;
+    }
+
     localStorage.setItem("j", j);
   } else {
-    j = parseInt(localStorage.getItem("j"));
-    console.log("local storage" + j);
+    wrongcode();
   }
-  document.getElementById(riddles[mix[j]]).style.display = "none";
-  document.getElementById(bottoms[mix[j]]).style.display = "none";
-  console.log("j" + j);
-  document.getElementById(stories[mix[j]]).style.display = "flex";
-  document.getElementById(nextriddles[mix[j]]).style.display = "flex";
-
-  j = j + 1;
-  if (j == mix.length) {
-    j = j - 1;
-  }
-
-  localStorage.setItem("j", j);
 }
 
 // nextriddle code  ---------------------------------------------------------------------------------------
@@ -100,6 +105,7 @@ function nextRiddle() {
   }
   if (i == mix.length) {
     console.log("End");
+    window.location.replace("completed.html");
   } else {
     console.log("i" + i);
     document.getElementById(riddles[mix[i]]).style.display = "flex";
@@ -167,5 +173,18 @@ function closehint() {
 window.onclick = function (event) {
   if (event.target == document.getElementById(hintmodals[mix[j]])) {
     document.getElementById(hintmodals[mix[j]]).style.display = "none";
+  }
+};
+
+// wrong code modal ------------------------------------------------------------
+function wrongcode() {
+  document.getElementById("wrongcode").style.display = "flex";
+}
+function closecode() {
+  document.getElementById("wrongcode").style.display = "none";
+}
+window.onclick = function (event) {
+  if (event.target == document.getElementById("wrongcode")) {
+    document.getElementById("wrongcode").style.display = "none";
   }
 };
