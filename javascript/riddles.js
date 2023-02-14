@@ -1,3 +1,14 @@
+if (!localStorage.getItem("j")) {
+  j = 0;
+  localStorage.setItem("j", j);
+} else {
+  j = parseInt(localStorage.getItem("j"));
+  console.log("local storage" + j);
+}
+console.log(j);
+
+// progress bar ----------------------------------------------------------------
+
 // shuffle index  -------------------------------------------------------------------
 function shuffle(array) {
   let currentIndex = array.length,
@@ -14,7 +25,7 @@ function shuffle(array) {
   return array;
 }
 
-var mix = [0, 1, 2];
+var mix = [0, 1, 2, 3, 4];
 if (!localStorage.getItem("shuffledArray")) {
   mix = shuffle(mix);
   localStorage.setItem("shuffledArray", JSON.stringify(mix));
@@ -24,23 +35,46 @@ if (!localStorage.getItem("shuffledArray")) {
 console.log(mix);
 
 // Array storage  ------------------------------------------------------------------------------
-var riddles = ["r1section", "r2section", "r3section"];
-var bottoms = ["bottom1", "bottom2", "bottom3"];
-var stories = ["storysection1", "storysection2", "storysection3"];
+var riddles = ["r1section", "r2section", "r3section", "r4section", "r5section"];
+var bottoms = ["bottom1", "bottom2", "bottom3", "bottom4", "bottom5"];
+var stories = [
+  "storysection1",
+  "storysection2",
+  "storysection3",
+  "storysection4",
+  "storysection5",
+];
 var nextriddles = [
   "nextriddlesection1",
   "nextriddlesection2",
   "nextriddlesection3",
+  "nextriddlesection4",
+  "nextriddlesection5",
+];
+
+var progressbarsection = [
+  "progressbarsection1",
+  "progressbarsection2",
+  "progressbarsection3",
+  "progressbarsection4",
+  "progressbarsection5",
 ];
 
 //initial display ---------------
-document.getElementById(riddles[mix[0]]).style.display = "flex";
-document.getElementById(bottoms[mix[0]]).style.display = "flex";
+document.getElementById(riddles[mix[j]]).style.display = "flex";
+document.getElementById(bottoms[mix[j]]).style.display = "flex";
+document.getElementById(progressbarsection[j]).style.display = "flex";
 
 // reveal story ----------------------------
-var j = 0;
+
 function revealStory() {
-  document.getElementById("logo").style.display = "none";
+  if (!localStorage.getItem("j")) {
+    j = 0;
+    localStorage.setItem("j", j);
+  } else {
+    j = parseInt(localStorage.getItem("j"));
+    console.log("local storage" + j);
+  }
   document.getElementById(riddles[mix[j]]).style.display = "none";
   document.getElementById(bottoms[mix[j]]).style.display = "none";
   console.log("j" + j);
@@ -48,39 +82,54 @@ function revealStory() {
   document.getElementById(nextriddles[mix[j]]).style.display = "flex";
 
   j = j + 1;
+  if (j == mix.length) {
+    j = j - 1;
+  }
+
+  localStorage.setItem("j", j);
 }
 
 // nextriddle code  ---------------------------------------------------------------------------------------
-var i = 1;
 
 function nextRiddle() {
+  if (!localStorage.getItem("i")) {
+    i = 1;
+    localStorage.setItem("i", i);
+  } else {
+    i = parseInt(localStorage.getItem("i"));
+  }
   if (i == mix.length) {
     console.log("End");
   } else {
     console.log("i" + i);
-    document.getElementById("logo").style.display = "block";
     document.getElementById(riddles[mix[i]]).style.display = "flex";
     document.getElementById(bottoms[mix[i]]).style.display = "flex";
     document.getElementById(stories[mix[i - 1]]).style.display = "none";
-    document.getElementById(nextriddles[mix[i - 1]]).style.display = "none";
+    document.getElementById(progressbarsection[i - 1]).style.display = "none";
+    document.getElementById(progressbarsection[i]).style.display = "flex";
 
     i = i + 1;
+    localStorage.setItem("i", i);
   }
 }
 
 // insta redirect modal code ---------------------------------------------------------------------------------------------
+var instamodalsarr = [
+  "instamodal1",
+  "instamodal2",
+  "instamodal3",
+  "instamodal4",
+  "instamodal5",
+];
 
-var imodal = document.getElementById("instamodal");
-var instabutton = document.getElementById("instamodalbtn");
-var span = document.getElementsByClassName("close")[0];
 function instamodals() {
-  imodal.style.display = "flex";
+  document.getElementById(instamodalsarr[mix[j]]).style.display = "flex";
 }
-span.onclick = function () {
-  imodal.style.display = "none";
-};
+function closeinstamodal() {
+  document.getElementById(instamodalsarr[mix[j]]).style.display = "none";
+}
 window.onclick = function (event) {
-  if (event.target == imodal) {
-    imodal.style.display = "none";
+  if (event.target == document.getElementById(instamodalsarr[mix[j]])) {
+    document.getElementById(instamodalsarr[mix[j]]).style.display = "none";
   }
 };
