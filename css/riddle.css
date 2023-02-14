@@ -62,12 +62,13 @@ p {
 .riddlesection {
   width: 100vw;
   height: 60vh;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   background-color: #2d3f4d;
   color: white;
+  display: none;
 }
 
 .helpicons {
@@ -85,10 +86,11 @@ p {
 .bottom {
   width: 100vw;
   height: 25vh;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  display: none;
 }
 
 .linkdiv {

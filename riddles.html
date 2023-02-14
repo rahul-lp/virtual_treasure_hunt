@@ -39,7 +39,79 @@
       <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
       <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
 
-      <div id="myModal" class="modal">
+      <div id="instamodal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="pushtoright"></div>
+          <span class="close">&times;</span>
+          <div class="break"></div>
+
+          <img src="res/Images/filter help.svg" alt="" />
+          <div class="break"></div>
+          <div class="break"></div>
+
+          <p>
+            You are getting redirected to Instagram! Scan the QR code at the
+            location using the Instagram camera to unlock the filter
+          </p>
+          <div class="break"></div>
+          <div class="break"></div>
+          <div
+            class="redirectbutton"
+            tabindex="1"
+            onclick="window.location.href = 'https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'"
+          >
+            Continue
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="riddlesection" id="r2section">
+      <div class="riddletextdiv">
+        <p>2nd riddle yoooooooooooooooo</p>
+      </div>
+      <div class="break"></div>
+      <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
+      <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
+
+      <div id="instamodal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="pushtoright"></div>
+          <span class="close">&times;</span>
+          <div class="break"></div>
+
+          <img src="res/Images/filter help.svg" alt="" />
+          <div class="break"></div>
+          <div class="break"></div>
+
+          <p>
+            You are getting redirected to Instagram! Scan the QR code at the
+            location using the Instagram camera to unlock the filter
+          </p>
+          <div class="break"></div>
+          <div class="break"></div>
+          <div
+            class="redirectbutton"
+            tabindex="1"
+            onclick="window.location.href = 'https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'"
+          >
+            Continue
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="riddlesection" id="r3section">
+      <div class="riddletextdiv">
+        <p>3rd storyyy yoooooo</p>
+      </div>
+      <div class="break"></div>
+      <div class="helpicons"><img src="res/Images/idea.png" alt="" /></div>
+      <div class="helpicons"><img src="res/Images/question.png" alt="" /></div>
+
+      <div id="instamodal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
           <div class="pushtoright"></div>
@@ -70,7 +142,64 @@
     <!-- bottom section with buttons and code -->
     <section class="bottom" id="bottom1">
       <div class="break"></div>
-      <div class="linkdiv" id="instamodal" tabindex="1">
+      <div
+        class="linkdiv"
+        id="instamodalbtn"
+        tabindex="1"
+        onclick="instamodals()"
+      >
+        Get Instagram filter here
+      </div>
+
+      <div class="break"></div>
+      <div class="break"></div>
+
+      <div class="codediv">
+        <input type="text" id="code" placeholder="Enter Code" required />
+      </div>
+
+      <div class="break"></div>
+
+      <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+        Reveal Story
+      </div>
+      <div class="break"></div>
+    </section>
+
+    <section class="bottom" id="bottom2">
+      <div class="break"></div>
+      <div
+        class="linkdiv"
+        id="instamodalbtn"
+        tabindex="1"
+        onclick="instamodals()"
+      >
+        Get Instagram filter here
+      </div>
+
+      <div class="break"></div>
+      <div class="break"></div>
+
+      <div class="codediv">
+        <input type="text" id="code" placeholder="Enter Code" required />
+      </div>
+
+      <div class="break"></div>
+
+      <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+        Reveal Story
+      </div>
+      <div class="break"></div>
+    </section>
+
+    <section class="bottom" id="bottom3">
+      <div class="break"></div>
+      <div
+        class="linkdiv"
+        id="instamodalbtn"
+        tabindex="1"
+        onclick="instamodals()"
+      >
         Get Instagram filter here
       </div>
 
@@ -104,9 +233,53 @@
         </div>
       </div>
     </section>
+
+    <section class="storysection" id="storysection2">
+      <div class="riddlegraphicsdiv">
+        <img src="res/Illustrations/illustration_print_lab.jpg" />
+      </div>
+      <div class="break"></div>
+      <div class="storywrapper">
+        <div class="storydiv">
+          <p>
+            No matter how tech-savvy you are, at the Print Lab, you are
+            transported in the coin age! No G-pay, only C-pay! this is 2nd sroy
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="storysection" id="storysection3">
+      <div class="riddlegraphicsdiv">
+        <img src="res/Illustrations/illustration_print_lab.jpg" />
+      </div>
+      <div class="break"></div>
+      <div class="storywrapper">
+        <div class="storydiv">
+          <p>
+            No matter how tech-savvy you are, at the Print Lab, you are
+            transported in the coin age! No G-pay, only C-pay! 3rd stpryyy
+          </p>
+        </div>
+      </div>
+    </section>
     <!-- next riddle section -->
     <section class="nextriddlesection" id="nextriddlesection1">
-      <div class="nextriddlediv" tabindex="1">Next Riddle</div>
+      <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
+        Next Riddle
+      </div>
+    </section>
+
+    <section class="nextriddlesection" id="nextriddlesection2">
+      <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
+        Next Riddle
+      </div>
+    </section>
+
+    <section class="nextriddlesection" id="nextriddlesection3">
+      <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
+        Next Riddle
+      </div>
     </section>
 
     <script src="javascript/riddles.js"></script>
