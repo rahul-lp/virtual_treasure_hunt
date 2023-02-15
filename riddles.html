@@ -1,635 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Riddles</title>
-    <link rel="stylesheet" href="css/riddle.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <!--  -->
-  <body>
-    <!-- back from insta modal -->
-    <div id="instabackdiv" class="modal">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riddles</title>
+  <link rel="stylesheet" href="css/riddle.css" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="instabackdiv" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="pushtoright"></div>
+      <span class="close" onclick="closeinstaback()">&times;</span>
+      <div class="break"></div>
+
+      <img src="res/Images/instaback.svg" alt="" />
+      <div class="break"></div>
+      <div class="break"></div>
+
+      <p>
+        Welcome back! <br />Enter the code you found in the filter in the box
+        below
+      </p>
+      <div class="break"></div>
+      <div class="break"></div>
+      <div class="redirectbutton" tabindex="1" onclick="closeinstaback()">
+        Continue
+      </div>
+    </div>
+  </div>
+
+  <!-- progress bar section -->
+  <section class="progressbarsection" id="progressbarsection1">
+    <div class="progressbardiv">
+      <img src="res/Progress bar/Progress 1.png" alt="progress bar 1" />
+    </div>
+
+    <div class="break"></div>
+    <div class="Riddletitle" id="riddle1">Riddle 1</div>
+  </section>
+
+  <section class="progressbarsection" id="progressbarsection2">
+    <div class="progressbardiv">
+      <img src="res/Progress bar/Progress 2.png" alt="progress bar 1" />
+    </div>
+
+    <div class="break"></div>
+    <div class="Riddletitle" id="riddle1">Riddle 2</div>
+  </section>
+
+  <section class="progressbarsection" id="progressbarsection3">
+    <div class="progressbardiv">
+      <img src="res/Progress bar/Progress 3.png" alt="progress bar 1" />
+    </div>
+
+    <div class="break"></div>
+    <div class="Riddletitle" id="riddle1">Riddle 3</div>
+  </section>
+
+  <section class="progressbarsection" id="progressbarsection4">
+    <div class="progressbardiv">
+      <img src="res/Progress bar/Progress 4.png" alt="progress bar 1" />
+    </div>
+
+    <div class="break"></div>
+    <div class="Riddletitle" id="riddle1">Riddle 4</div>
+  </section>
+
+  <section class="progressbarsection" id="progressbarsection5">
+    <div class="progressbardiv">
+      <img src="res/Progress bar/Progress 5.png" alt="progress bar 1" />
+    </div>
+
+    <div class="break"></div>
+    <div class="Riddletitle" id="riddle1">Riddle 5</div>
+  </section>
+
+  <!-- riddle section -->
+
+  <section class="riddlesection" id="r1section">
+    <div class="riddletextdiv">
+      <p>
+        I am the talk of town. <br> People run to me when internet goes down.
+      </p>
+    </div>
+    <div class="break"></div>
+    <div class="helpicons" onclick="hintmodal()">
+      <img src="res/Images/idea.png" alt="" />
+    </div>
+
+    <div id="hintmodal1" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <div class="pushtoright"></div>
-        <span class="close" onclick="closeinstaback()">&times;</span>
+        <span class="close" onclick="closehint()">&times;</span>
         <div class="break"></div>
 
-        <img src="res/Images/instaback.svg" alt="" />
+        <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+        <div class="break"></div>
+        <div class="break"></div>
+
+        <p>When the internet's down and you're feeling the pain, <br>Come to this place to file your complaint. <br>Now
+          that you’re here, might do something more, <br>get those art supplies from the store next door.
+        </p>
+      </div>
+    </div>
+
+    <div id="instamodal1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closeinstamodal()">&times;</span>
+        <div class="break"></div>
+
+        <img src="res/Images/filter help.svg" alt="" />
         <div class="break"></div>
         <div class="break"></div>
 
         <p>
-          Welcome back! <br />Enter the code you found in the filter in the box
-          below
+          You are getting redirected to Instagram! Scan the QR code at the
+          location using the Instagram camera to unlock the filter
         </p>
         <div class="break"></div>
         <div class="break"></div>
-        <div class="redirectbutton" tabindex="1" onclick="closeinstaback()">
+        <div class="redirectbutton" tabindex="1"
+          onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/758612729199260/'; setTimeout(instaback, 5000);">
           Continue
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- wrong code modal -->
-    <div id="wrongcode" class="modal">
+  <section class="riddlesection" id="r2section">
+    <div class="riddletextdiv">
+      <p>A place which reminds you of an unforgettable meal, <br>On the day where Gold and white were the real deal!</p>
+    </div>
+    <div class="break"></div>
+    <div class="helpicons" onclick="hintmodal()">
+      <img src="res/Images/idea.png" alt="" />
+    </div>
+
+    <div id="hintmodal2" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <div class="pushtoright"></div>
-        <span class="close" onclick="closecode()">&times;</span>
+        <span class="close" onclick="closehint()">&times;</span>
         <div class="break"></div>
 
-        <img src="res/Images/invalid.svg" alt="" width="60px" />
+        <img src="res/Images/Hint modal.svg" alt="" width="50px" />
         <div class="break"></div>
         <div class="break"></div>
 
-        <p>Invalid Code!! Check Again!!</p>
+        <p>People in gold and white attire, <br>played tug of war and got pretty tired.<br>
+          To change the mood, and get energy boost, <br>they came to this place for some Authentic Food.
+        </p>
       </div>
     </div>
 
-    <!-- progress bar section -->
-    <section class="progressbarsection" id="progressbarsection1">
-      <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 1.png" alt="progress bar 1" />
-      </div>
+    <div id="instamodal2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closeinstamodal()">&times;</span>
+        <div class="break"></div>
 
-      <div class="break"></div>
-      <div class="Riddletitle" id="riddle1">Riddle 1</div>
-    </section>
+        <img src="res/Images/filter help.svg" alt="" />
+        <div class="break"></div>
+        <div class="break"></div>
 
-    <section class="progressbarsection" id="progressbarsection2">
-      <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 2.png" alt="progress bar 1" />
-      </div>
-
-      <div class="break"></div>
-      <div class="Riddletitle" id="riddle1">Riddle 2</div>
-    </section>
-
-    <section class="progressbarsection" id="progressbarsection3">
-      <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 3.png" alt="progress bar 1" />
-      </div>
-
-      <div class="break"></div>
-      <div class="Riddletitle" id="riddle1">Riddle 3</div>
-    </section>
-
-    <section class="progressbarsection" id="progressbarsection4">
-      <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 4.png" alt="progress bar 1" />
-      </div>
-
-      <div class="break"></div>
-      <div class="Riddletitle" id="riddle1">Riddle 4</div>
-    </section>
-
-    <section class="progressbarsection" id="progressbarsection5">
-      <div class="progressbardiv">
-        <img src="res/Progress bar/Progress 5.png" alt="progress bar 1" />
-      </div>
-
-      <div class="break"></div>
-      <div class="Riddletitle" id="riddle1">Riddle 5</div>
-    </section>
-
-    <!-- riddle section -->
-
-    <section class="riddlesection" id="r1section">
-      <div class="riddletextdiv">
         <p>
-          Error! Error! Your submissions is now a terror Even the dinosaur
-          cannot save you from this horror This place is your only saviour
+          You are getting redirected to Instagram! Scan the QR code at the
+          location using the Instagram camera to unlock the filter
         </p>
-      </div>
-      <div class="break"></div>
-      <div class="helpicons" onclick="hintmodal()">
-        <img src="res/Images/idea.png" alt="" />
-      </div>
-
-      <div id="hintmodal1" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closehint()">&times;</span>
-          <div class="break"></div>
-
-          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
-          <div class="break"></div>
-          <div class="break"></div>
-
-          <p>Hint 1</p>
+        <div class="break"></div>
+        <div class="break"></div>
+        <div class="redirectbutton" tabindex="1"
+          onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/857286468710930/?ch=MGQwZmEyM2QwNmMwMjVhMmM4M2QzY2JhMzY5N2RiZjg%3D'; setTimeout(instaback, 5000);">
+          Continue
         </div>
       </div>
+    </div>
+  </section>
 
-      <div id="instamodal1" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closeinstamodal()">&times;</span>
-          <div class="break"></div>
+  <section class="riddlesection" id="r3section">
+    <div class="riddletextdiv">
+      <p>
+        Yellow Yellow, You are greeted by a peace-loving fellow Guiding you to
+        a geometry that is forever hollow
+      </p>
+    </div>
+    <div class="break"></div>
+    <div class="helpicons" onclick="hintmodal()">
+      <img src="res/Images/idea.png" alt="" />
+    </div>
 
-          <img src="res/Images/filter help.svg" alt="" />
-          <div class="break"></div>
-          <div class="break"></div>
+    <div id="hintmodal3" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closehint()">&times;</span>
+        <div class="break"></div>
 
-          <p>
-            You are getting redirected to Instagram! Scan the QR code at the
-            location using the Instagram camera to unlock the filter
-          </p>
-          <div class="break"></div>
-          <div class="break"></div>
-          <div
-            class="redirectbutton"
-            tabindex="1"
-            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
-          >
-            Continue
-          </div>
-        </div>
+        <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+        <div class="break"></div>
+        <div class="break"></div>
+
+        <p>Do you really need a hint for the most epic spot at the building?</p>
       </div>
-    </section>
+    </div>
 
-    <section class="riddlesection" id="r2section">
-      <div class="riddletextdiv">
+    <div id="instamodal3" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closeinstamodal()">&times;</span>
+        <div class="break"></div>
+
+        <img src="res/Images/filter help.svg" alt="" />
+        <div class="break"></div>
+        <div class="break"></div>
+
         <p>
-          A place which reminds you of an unforgettable meal For a day, Gold and
-          white colours are the real deal
+          You are getting redirected to Instagram! Scan the QR code at the
+          location using the Instagram camera to unlock the filter
         </p>
-      </div>
-      <div class="break"></div>
-      <div class="helpicons" onclick="hintmodal()">
-        <img src="res/Images/idea.png" alt="" />
-      </div>
-
-      <div id="hintmodal2" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closehint()">&times;</span>
-          <div class="break"></div>
-
-          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
-          <div class="break"></div>
-          <div class="break"></div>
-
-          <p>Hint 2</p>
+        <div class="break"></div>
+        <div class="break"></div>
+        <div class="redirectbutton" tabindex="1"
+          onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/525288316155005/'; setTimeout(instaback, 5000);">
+          Continue
         </div>
       </div>
+    </div>
+  </section>
 
-      <div id="instamodal2" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closeinstamodal()">&times;</span>
-          <div class="break"></div>
+  <section class="riddlesection" id="r4section">
+    <div class="riddletextdiv">
+      <p>
+        I am the entrance all time free, four wheeler can directly access me, <br>I don’t get enough credit, but I come
+        in picture when its about fee.
+      </p>
+    </div>
+    <div class="break"></div>
+    <div class="helpicons" onclick="hintmodal()">
+      <img src="res/Images/idea.png" alt="" />
+    </div>
 
-          <img src="res/Images/filter help.svg" alt="" />
-          <div class="break"></div>
-          <div class="break"></div>
+    <div id="hintmodal4" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closehint()">&times;</span>
+        <div class="break"></div>
 
-          <p>
-            You are getting redirected to Instagram! Scan the QR code at the
-            location using the Instagram camera to unlock the filter
-          </p>
-          <div class="break"></div>
-          <div class="break"></div>
-          <div
-            class="redirectbutton"
-            tabindex="1"
-            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
-          >
-            Continue
-          </div>
-        </div>
+        <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+        <div class="break"></div>
+        <div class="break"></div>
+
+        <p>At this location, you'll find a guest, <br> Whose presence brings good luck, no less.<br>For just a while,
+          he'll choose to stay,<br>Before he dives and swims away.</p>
       </div>
-    </section>
+    </div>
 
-    <section class="riddlesection" id="r3section">
-      <div class="riddletextdiv">
+    <div id="instamodal4" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closeinstamodal()">&times;</span>
+        <div class="break"></div>
+
+        <img src="res/Images/filter help.svg" alt="" />
+        <div class="break"></div>
+        <div class="break"></div>
+
         <p>
-          Yellow Yellow, You are greeted by a peace-loving fellow Guiding you to
-          a geometry that is forever hollow
+          You are getting redirected to Instagram! Scan the QR code at the
+          location using the Instagram camera to unlock the filter
         </p>
-      </div>
-      <div class="break"></div>
-      <div class="helpicons" onclick="hintmodal()">
-        <img src="res/Images/idea.png" alt="" />
-      </div>
-
-      <div id="hintmodal3" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closehint()">&times;</span>
-          <div class="break"></div>
-
-          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
-          <div class="break"></div>
-          <div class="break"></div>
-
-          <p>Hint 3</p>
+        <div class="break"></div>
+        <div class="break"></div>
+        <div class="redirectbutton" tabindex="1"
+          onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/2344499299036178/'; setTimeout(instaback, 5000);">
+          Continue
         </div>
       </div>
+    </div>
+  </section>
 
-      <div id="instamodal3" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closeinstamodal()">&times;</span>
-          <div class="break"></div>
+  <section class="riddlesection" id="r5section">
+    <div class="riddletextdiv">
+      <p>
+        Let your work take a wing, but wait, change you must bring! Don’t have
+        any? borrow it fast, for technology here is frozen in past
+      </p>
+    </div>
+    <div class="break"></div>
+    <div class="helpicons" onclick="hintmodal()">
+      <img src="res/Images/idea.png" alt="" />
+    </div>
 
-          <img src="res/Images/filter help.svg" alt="" />
-          <div class="break"></div>
-          <div class="break"></div>
+    <div id="hintmodal5" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closehint()">&times;</span>
+        <div class="break"></div>
 
-          <p>
-            You are getting redirected to Instagram! Scan the QR code at the
-            location using the Instagram camera to unlock the filter
-          </p>
-          <div class="break"></div>
-          <div class="break"></div>
-          <div
-            class="redirectbutton"
-            tabindex="1"
-            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
-          >
-            Continue
-          </div>
-        </div>
+        <img src="res/Images/Hint modal.svg" alt="" width="50px" />
+        <div class="break"></div>
+        <div class="break"></div>
+
+        <p>No-G-pay, only C-pay</p>
       </div>
-    </section>
+    </div>
 
-    <section class="riddlesection" id="r4section">
-      <div class="riddletextdiv">
-        <p>
-          Enter through this place where opportunities are made, work displayed
-          and celebrations are slayed
-        </p>
-      </div>
-      <div class="break"></div>
-      <div class="helpicons" onclick="hintmodal()">
-        <img src="res/Images/idea.png" alt="" />
-      </div>
+    <div id="instamodal5" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="pushtoright"></div>
+        <span class="close" onclick="closeinstamodal()">&times;</span>
+        <div class="break"></div>
 
-      <div id="hintmodal4" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closehint()">&times;</span>
-          <div class="break"></div>
-
-          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
-          <div class="break"></div>
-          <div class="break"></div>
-
-          <p>Hint 4</p>
-        </div>
-      </div>
-
-      <div id="instamodal4" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closeinstamodal()">&times;</span>
-          <div class="break"></div>
-
-          <img src="res/Images/filter help.svg" alt="" />
-          <div class="break"></div>
-          <div class="break"></div>
-
-          <p>
-            You are getting redirected to Instagram! Scan the QR code at the
-            location using the Instagram camera to unlock the filter
-          </p>
-          <div class="break"></div>
-          <div class="break"></div>
-          <div
-            class="redirectbutton"
-            tabindex="1"
-            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
-          >
-            Continue
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="riddlesection" id="r5section">
-      <div class="riddletextdiv">
-        <p>
-          Let your work take a wing, but wait, change you must bring! Don’t have
-          any? borrow it fast, for technology here is frozen in past
-        </p>
-      </div>
-      <div class="break"></div>
-      <div class="helpicons" onclick="hintmodal()">
-        <img src="res/Images/idea.png" alt="" />
-      </div>
-
-      <div id="hintmodal5" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closehint()">&times;</span>
-          <div class="break"></div>
-
-          <img src="res/Images/Hint modal.svg" alt="" width="50px" />
-          <div class="break"></div>
-          <div class="break"></div>
-
-          <p>Hint 5</p>
-        </div>
-      </div>
-
-      <div id="instamodal5" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="pushtoright"></div>
-          <span class="close" onclick="closeinstamodal()">&times;</span>
-          <div class="break"></div>
-
-          <img src="res/Images/filter help.svg" alt="" />
-          <div class="break"></div>
-          <div class="break"></div>
-
-          <p>
-            You are getting redirected to Instagram! Scan the QR code at the
-            location using the Instagram camera to unlock the filter
-          </p>
-          <div class="break"></div>
-          <div class="break"></div>
-          <div
-            class="redirectbutton"
-            tabindex="1"
-            onclick="closeinstamodal(); window.location.href='https://www.instagram.com/ar/871330144089102/?ch=ZjRjOWM0OGQ2MjZiYWU2YmViN2Y2NGE4ZmQwNmJlYWY%3D'; setTimeout(instaback, 5000);"
-          >
-            Continue
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- bottom section with buttons and code -->
-    <section class="bottom" id="bottom1">
-      <div class="break"></div>
-      <div
-        class="linkdiv"
-        id="instamodalbtn"
-        tabindex="1"
-        onclick="instamodals()"
-      >
-        Go to Instagram filter
-        <img src="res/Images/Look here.png" />
-      </div>
-
-      <div class="break"></div>
-      <div class="break"></div>
+        <img src="res/Images/filter help.svg" alt="" />
+        <div class="break"></div>
+        <div class="break"></div>
 
       <div class="codediv">
         <input type="text" id="code1" placeholder="Enter Code" required />
       </div>
+    </div>
+  </section>
 
-      <div class="break"></div>
+  <!-- bottom section with buttons and code -->
+  <section class="bottom" id="bottom1">
+    <div class="break"></div>
+    <div class="linkdiv" id="instamodalbtn" tabindex="1" onclick="instamodals()">
+      Go to Instagram filter
+      <img src="res/Images/Look here.png" />
+    </div>
 
-      <div
-        class="revealbuttondiv"
-        tabindex="1"
-        onclick="revealStory(document.getElementById('code1').value)"
-      >
-        Reveal Story
+    <div class="break"></div>
+    <div class="break"></div>
+
+    <div class="codediv">
+      <input type="text" id="code" placeholder="Enter Code" required />
+    </div>
+
+    <div class="break"></div>
+
+    <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      Reveal Story
+    </div>
+    <div class="break"></div>
+  </section>
+
+  <section class="bottom" id="bottom2">
+    <div class="break"></div>
+    <div class="linkdiv" id="instamodalbtn" tabindex="1" onclick="instamodals()">
+      Go to Instagram filter
+      <img src="res/Images/Look here.png" />
+    </div>
+
+    <div class="break"></div>
+    <div class="break"></div>
+
+    <div class="codediv">
+      <input type="text" id="code" placeholder="Enter Code" required />
+    </div>
+
+    <div class="break"></div>
+
+    <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      Reveal Story
+    </div>
+    <div class="break"></div>
+  </section>
+
+  <section class="bottom" id="bottom3">
+    <div class="break"></div>
+    <div class="linkdiv" id="instamodalbtn" tabindex="1" onclick="instamodals()">
+      Go to Instagram filter
+
+      <img src="res/Images/Look here.png" />
+    </div>
+
+    <div class="break"></div>
+    <div class="break"></div>
+
+    <div class="codediv">
+      <input type="text" id="code" placeholder="Enter Code" required />
+    </div>
+
+    <div class="break"></div>
+
+    <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      Reveal Story
+    </div>
+    <div class="break"></div>
+  </section>
+
+  <section class="bottom" id="bottom4">
+    <div class="break"></div>
+    <div class="linkdiv" id="instamodalbtn" tabindex="1" onclick="instamodals()">
+      Go to Instagram filter
+      <img src="res/Images/Look here.png" />
+    </div>
+
+    <div class="break"></div>
+    <div class="break"></div>
+
+    <div class="codediv">
+      <input type="text" id="code" placeholder="Enter Code" required />
+    </div>
+
+    <div class="break"></div>
+
+    <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      Reveal Story
+    </div>
+    <div class="break"></div>
+  </section>
+
+  <section class="bottom" id="bottom5">
+    <div class="break"></div>
+    <div class="linkdiv" id="instamodalbtn" tabindex="1" onclick="instamodals()">
+      Go to Instagram filter
+      <img src="res/Images/Look here.png" />
+    </div>
+
+    <div class="break"></div>
+    <div class="break"></div>
+
+    <div class="codediv">
+      <input type="text" id="code" placeholder="Enter Code" required />
+    </div>
+
+    <div class="break"></div>
+
+    <div class="revealbuttondiv" tabindex="1" onclick="revealStory()">
+      Reveal Story
+    </div>
+    <div class="break"></div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="storysection" id="storysection1">
+    <div class="riddlegraphicsdiv">
+      <img src="res/Illustrations/illustration_wifi.png" />
+    </div>
+    <div class="break"></div>
+    <div class="storywrapper">
+      <div class="storydiv">
+        <p> When deadlines are close and bills are pending and on top of that, internet is not working. If you have been
+          to Data Center, you’ve been through a lot. And if you’re like chandler_rock, you’ll use your own.</p>
       </div>
-      <div class="break"></div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bottom" id="bottom2">
-      <div class="break"></div>
-      <div
-        class="linkdiv"
-        id="instamodalbtn"
-        tabindex="1"
-        onclick="instamodals()"
-      >
-        Go to Instagram filter
-        <img src="res/Images/Look here.png" />
+  <section class="storysection" id="storysection2">
+    <div class="riddlegraphicsdiv">
+      <img src="res/Illustrations/illustration_onam.png" />
+    </div>
+    <div class="break"></div>
+    <div class="storywrapper">
+      <div class="storydiv">
+        <p>It felt like entire college has become one with Sarees and Mundu. Photo session at every corner, Sadhya added
+          the real taste of joy and what’s best then eating it together with your loved one.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="break"></div>
-      <div class="break"></div>
-
-      <div class="codediv">
-        <input type="text" id="code2" placeholder="Enter Code" required />
+  <section class="storysection" id="storysection3">
+    <div class="riddlegraphicsdiv">
+      <img src="res/Illustrations/illustration_foyer.png" />
+    </div>
+    <div class="break"></div>
+    <div class="storywrapper">
+      <div class="storydiv">
+        <p>Every work exhibition, every festival, this logo has greeted us on your lowest and participated with us in
+          our best. From garba night to halloween fun, isn’t the logo place or to go ?</p>
       </div>
+    </div>
+  </section>
 
-      <div class="break"></div>
-
-      <div
-        class="revealbuttondiv"
-        tabindex="1"
-        onclick="revealStory(document.getElementById('code2').value)"
-      >
-        Reveal Story
+  <section class="storysection" id="storysection4">
+    <div class="riddlegraphicsdiv">
+      <img src="res/Illustrations/illustration_dhol_tahasha.png" />
+    </div>
+    <div class="break"></div>
+    <div class="storywrapper">
+      <div class="storydiv">
+        <p>Our introduction to Pune and its culture. Ganesh utsav, who can forget that dhol tasha day! Aarti, Sthapana
+          and Visarjan, first festival of the year.</p>
       </div>
-      <div class="break"></div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bottom" id="bottom3">
-      <div class="break"></div>
-      <div
-        class="linkdiv"
-        id="instamodalbtn"
-        tabindex="1"
-        onclick="instamodals()"
-      >
-        Go to Instagram filter
-
-        <img src="res/Images/Look here.png" />
+  <section class="storysection" id="storysection5">
+    <div class="riddlegraphicsdiv">
+      <img src="res/Illustrations/illustration_print_lab.png" />
+    </div>
+    <div class="break"></div>
+    <div class="storywrapper">
+      <div class="storydiv">
+        <p>
+          No matter how tech-savvy you are, at the Print Lab, you are
+          transported in the coin age! No G-pay, only C-pay!
+        </p>
       </div>
+    </div>
+  </section>
 
-      <div class="break"></div>
-      <div class="break"></div>
+  <!-- next riddle section -->
+  <section class="nextriddlesection" id="nextriddlesection1">
+    <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
+      Next Riddle
+    </div>
+  </section>
 
-      <div class="codediv">
-        <input type="text" id="code3" placeholder="Enter Code" required />
-      </div>
+  <section class="nextriddlesection" id="nextriddlesection2">
+    <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
+      Next Riddle
+    </div>
+  </section>
 
-      <div class="break"></div>
+  <section class="nextriddlesection" id="nextriddlesection3">
+    <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
+      Next Riddle
+    </div>
+  </section>
 
-      <div
-        class="revealbuttondiv"
-        tabindex="1"
-        onclick="revealStory(document.getElementById('code3').value)"
-      >
-        Reveal Story
-      </div>
-      <div class="break"></div>
-    </section>
+  <section class="nextriddlesection" id="nextriddlesection4">
+    <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
+      Next Riddle
+    </div>
+  </section>
 
-    <section class="bottom" id="bottom4">
-      <div class="break"></div>
-      <div
-        class="linkdiv"
-        id="instamodalbtn"
-        tabindex="1"
-        onclick="instamodals()"
-      >
-        Go to Instagram filter
-        <img src="res/Images/Look here.png" />
-      </div>
+  <section class="nextriddlesection" id="nextriddlesection5">
+    <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
+      Next Riddle
+    </div>
+  </section>
 
-      <div class="break"></div>
-      <div class="break"></div>
+  <script src="javascript/riddles.js"></script>
+</body>
 
-      <div class="codediv">
-        <input type="text" id="code4" placeholder="Enter Code" required />
-      </div>
-
-      <div class="break"></div>
-
-      <div
-        class="revealbuttondiv"
-        tabindex="1"
-        onclick="revealStory(document.getElementById('code4').value)"
-      >
-        Reveal Story
-      </div>
-      <div class="break"></div>
-    </section>
-
-    <section class="bottom" id="bottom5">
-      <div class="break"></div>
-      <div
-        class="linkdiv"
-        id="instamodalbtn"
-        tabindex="1"
-        onclick="instamodals()"
-      >
-        Go to Instagram filter
-        <img src="res/Images/Look here.png" />
-      </div>
-
-      <div class="break"></div>
-      <div class="break"></div>
-
-      <div class="codediv">
-        <input type="text" id="code5" placeholder="Enter Code" required />
-      </div>
-
-      <div class="break"></div>
-
-      <div
-        class="revealbuttondiv"
-        tabindex="1"
-        onclick="revealStory(document.getElementById('code5').value)"
-      >
-        Reveal Story
-      </div>
-      <div class="break"></div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="storysection" id="storysection1">
-      <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_wifi.png" />
-      </div>
-      <div class="break"></div>
-      <div class="storywrapper">
-        <div class="storydiv">
-          <p>Wifi story</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="storysection" id="storysection2">
-      <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_onam.png" />
-      </div>
-      <div class="break"></div>
-      <div class="storywrapper">
-        <div class="storydiv">
-          <p>Onam story</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="storysection" id="storysection3">
-      <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_foyer.png" />
-      </div>
-      <div class="break"></div>
-      <div class="storywrapper">
-        <div class="storydiv">
-          <p>Foyer Story</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="storysection" id="storysection4">
-      <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_dhol_tahasha.png" />
-      </div>
-      <div class="break"></div>
-      <div class="storywrapper">
-        <div class="storydiv">
-          <p>Dhol story</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="storysection" id="storysection5">
-      <div class="riddlegraphicsdiv">
-        <img src="res/Illustrations/illustration_print_lab.png" />
-      </div>
-      <div class="break"></div>
-      <div class="storywrapper">
-        <div class="storydiv">
-          <p>
-            No matter how tech-savvy you are, at the Print Lab, you are
-            transported in the coin age! No G-pay, only C-pay!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- next riddle section -->
-    <section class="nextriddlesection" id="nextriddlesection1">
-      <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
-        Next Riddle
-      </div>
-    </section>
-
-    <section class="nextriddlesection" id="nextriddlesection2">
-      <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
-        Next Riddle
-      </div>
-    </section>
-
-    <section class="nextriddlesection" id="nextriddlesection3">
-      <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
-        Next Riddle
-      </div>
-    </section>
-
-    <section class="nextriddlesection" id="nextriddlesection4">
-      <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
-        Next Riddle
-      </div>
-    </section>
-
-    <section class="nextriddlesection" id="nextriddlesection5">
-      <div class="nextriddlediv" tabindex="1" onclick="nextRiddle()">
-        Next Riddle
-      </div>
-    </section>
-
-    <script src="javascript/riddles.js"></script>
-  </body>
 </html>
