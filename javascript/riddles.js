@@ -66,7 +66,7 @@ document.getElementById(bottoms[mix[j]]).style.display = "flex";
 document.getElementById(progressbarsection[j]).style.display = "flex";
 
 // reveal story ----------------------------
-var codes = ["FIDA", "DASH", "ROFY", "TADH", "PLAB"];
+var codes = ["FIDA", "DASH", "ROFY", "DHOL", "PLAB"];
 function revealStory(code) {
   code = code.toUpperCase();
   if (code === codes[mix[j]]) {
